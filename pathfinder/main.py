@@ -9,13 +9,11 @@ def create_map(setting_file):
     setting = yaml.safe_load(open(setting_file, 'r'))
     grid = Map(setting["width"], setting["height"])
     
-    # lazy eval
-    # list(map(lambda coordinate:grid.insert_element(coordinate,grid.OBSTACLE),setting["obstacles"]))
     for coordinate in setting["obstacles"]:
-        grid.insert_element(coordinate,grid.OBSTACLE)
+        grid.insert_element(tuple(coordinate),grid.OBSTACLE)
         
-    grid.insert_element(setting["start"], grid.START)
-    grid.insert_element(setting["end"], grid.END)
+    grid.insert_element(tuple(setting["start"]), grid.START)
+    grid.insert_element(tuple(setting["end"]), grid.END)
 
 
     print(grid.map)

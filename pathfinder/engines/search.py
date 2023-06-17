@@ -1,5 +1,5 @@
-from map import Map
-from solver import Solver
+from pathfinder.data_structure.map import Map
+from pathfinder.engines.solver import Solver
 from typing import List,Tuple
 
 class Node:

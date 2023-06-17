@@ -1,6 +1,6 @@
-from pathfinder.map import Map
-from typing import Tuple
+from pathfinder.data_structure.map import Map
 from pathfinder.shortcuts import *
+from typing import Tuple
 
 class Solver:
     def __init__(self, grid: Map) -> None:

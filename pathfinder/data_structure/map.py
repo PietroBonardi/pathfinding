@@ -4,7 +4,6 @@ from pathfinder.shortcuts import *
 
 class Map():
 
-
     def __init__(self, row: int, col: int) -> None:
         assert row >= 0 and col >= 0
         self.row = row

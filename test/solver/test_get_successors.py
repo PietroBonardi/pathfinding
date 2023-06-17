@@ -1,6 +1,6 @@
 import pytest
-from pathfinder.map import Map
-from pathfinder.solver import Solver
+from pathfinder.data_structure.map import Map
+from pathfinder.engines.solver import Solver
 from pathfinder.shortcuts import *
 
 grid_no_obs = Map(4, 5)

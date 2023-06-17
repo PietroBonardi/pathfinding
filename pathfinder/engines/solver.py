@@ -17,7 +17,7 @@ class Solver:
 
     def get_successors(self, coordinates: Tuple[int, int]):
         """
-            Add comments.
+            Add comments. (TO DO: metodo della classe map)
         """
         i, j = coordinates
         successor = []

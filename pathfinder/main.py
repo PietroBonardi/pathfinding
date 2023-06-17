@@ -1,7 +1,7 @@
 import click
 import yaml
 from map import Map
-
+from pathfinder.shortcuts import *
 
 @click.command()
 @click.argument('setting_file')
@@ -10,10 +10,10 @@ def create_map(setting_file):
     grid = Map(setting["width"], setting["height"])
     
     for coordinate in setting["obstacles"]:
-        grid.insert_element(tuple(coordinate),grid.OBSTACLE)
+        grid.insert_element(tuple(coordinate), OBSTACLE)
         
-    grid.insert_element(tuple(setting["start"]), grid.START)
-    grid.insert_element(tuple(setting["end"]), grid.END)
+    grid.insert_element(tuple(setting["start"]), START)
+    grid.insert_element(tuple(setting["end"]), END)
 
 
     print(grid.map)

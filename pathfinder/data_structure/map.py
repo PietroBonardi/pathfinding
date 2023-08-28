@@ -8,10 +8,8 @@ class Map():
         assert row >= 0 and col >= 0
         self.row = row
         self.col = col
-
         self.start = None
         self.end = None
-
         self.map = np.zeros((self.row, self.col))
 
     def is_inside(self, coordinate: Tuple[int,int]) -> bool:
@@ -29,9 +27,26 @@ class Map():
         assert self.is_inside(coordinate), "wrong coordinate!"
         assert label in LABELS, "wrong label!"
         self.map[i][j] = label
+
         if label == START:
             self.start = coordinate
         elif label == END:
             self.end = coordinate
+    
+    def get_successors(self, coordinates: Tuple[int, int]) -> list[int]:
+        i, j = coordinates
+        successor = []
+        lower_i = max(i-1, 0)
+        upper_i = min(i+1, self.row-1)
+        lower_j = max(j-1, 0)
+        upper_j = min(j+1, self.col-1)
+        
+        for next_i in range(lower_i, upper_i+1):
+            for next_j in range(lower_j, upper_j+1):
+                if not (next_i == i and next_j == j):
+                    if self.get_element((next_i, next_j)) != OBSTACLE:
+                        successor.append((next_i, next_j))
+
+        return successor
 
             

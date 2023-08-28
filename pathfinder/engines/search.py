@@ -17,24 +17,24 @@ class Node:
 
 
 class RandomWalk(Solver):
-    def __init__(self, grid: Map) -> None:
-        super().__init__(grid)
+    def __init__(self, map: Map) -> None:
+        super().__init__(map)
 
+    # NOTE: implemented abstract method
     def solve(self) -> List[Tuple[int, int]]:
-        # Call solver algorithm
         final_node = self.random_walk()
 
         return final_node.extract_path()
 
     def random_walk(self) -> Node:
-        start = self.grid.start
-        end = self.grid.end
+        start = self.map.start
+        end = self.map.end
         current = Node(start)
 
         while True:
             if current.coordinate == end:
                 return current
 
-            successors = self.get_successors(current.coordinate)
+            successors = self.map.get_successor(current.coordinate)
             next = Node(random.sample(successors, 1)[0], current)
             current = next

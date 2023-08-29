@@ -35,6 +35,6 @@ class RandomWalk(Solver):
             if current.coordinate == end:
                 return current
 
-            successors = self.map.get_successor(current.coordinate)
+            successors = self.map.get_successors(current.coordinate)
             next = Node(random.sample(successors, 1)[0], current)
             current = next

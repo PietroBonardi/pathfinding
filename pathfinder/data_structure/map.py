@@ -21,7 +21,6 @@ class Map():
         i, j = coordinate
         return self.map[i, j]
 
-
     def insert_element(self, coordinate: Tuple[int,int], label: int) -> None:
         i, j = coordinate
         assert self.is_inside(coordinate), "wrong coordinate!"

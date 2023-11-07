@@ -76,7 +76,7 @@ class MapUI:
         self.window.after(delay, lambda tmp_i = i, tmp_j = j : self.frames[tmp_i][tmp_j].config(bg="yellow"))
 
 
-
+    # NOTE: bug when using chess map disposition!
     def run(self) -> None:
         # TODO: add solver
         self.solver = RandomWalk(self.map)

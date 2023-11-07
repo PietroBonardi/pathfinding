@@ -3,7 +3,7 @@ from pathfinder.ui.map_ui import MapUI
 
 
 def main():
-    map_ui = MapUI(5, 5)
+    map_ui = MapUI(5, 10)
     map_ui.create_map()
     map_ui.window.mainloop()
     

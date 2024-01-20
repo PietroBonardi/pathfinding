@@ -9,4 +9,3 @@ class Solver:  # NOTE: Abstract method
     def solve(self):
         raise NotImplementedError
     
-

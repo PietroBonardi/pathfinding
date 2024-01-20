@@ -1,7 +1,7 @@
 import tkinter as tk
 from pathfinder.data_structure.map import Map
 from pathfinder.shortcuts import *
-from pathfinder.engines.search import RandomWalk
+from pathfinder.engines.search import RandomWalk, DepthFirstSearch
 from typing import List, Tuple
 import time
 
@@ -79,7 +79,7 @@ class MapUI:
     # NOTE: bug when using chess map disposition!
     def run(self) -> None:
         # TODO: add solver
-        self.solver = RandomWalk(self.map)
+        self.solver = DepthFirstSearch(self.map)
         self.draw_solution(self.solver.solve())
 
 

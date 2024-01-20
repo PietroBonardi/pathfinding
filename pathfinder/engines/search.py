@@ -38,3 +38,48 @@ class RandomWalk(Solver):
             successors = self.map.get_successors(current.coordinate)
             next = Node(random.sample(successors, 1)[0], current)
             current = next
+
+
+class DepthFirstSearch(Solver):
+    def __init__(self, map: Map) -> None:
+        super().__init__(map)
+    
+    def solve(self) -> List[Tuple[int, int]]:
+        final_node = self.dfs()
+        
+        return final_node.extract_path()
+    
+    def dfs(self) -> Node:
+        start = self.map.start 
+        end = self.map.end 
+
+        closed = set()
+        open = [Node(start)] 
+
+        while open:                                                 
+            cur_node = open.pop()
+            closed.add(cur_node.coordinate) 
+
+            if cur_node.coordinate == end: 
+                return cur_node
+            
+            successors = self.map.get_successors(cur_node.coordinate)
+            for coordinate in successors: 
+                if coordinate not in closed:
+                    open.append(Node(coordinate=coordinate, precursor=cur_node))
+            
+        
+        print("No solution found")
+
+
+
+
+
+
+
+
+
+
+
+
+    

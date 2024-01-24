@@ -49,7 +49,9 @@ class MapUI:
             cell_widget.config(bg="black")
 
     def clear(self) -> None:
+        self.map = Map(self.rows, self.cols)
         self.map.start, self.map.end = None, None
+        
         for i in range(self.rows):
             for j in range(self.cols):
                 self.frames[i][j].config(bg="grey")

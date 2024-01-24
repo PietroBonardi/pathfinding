@@ -12,6 +12,9 @@ class Node:
     def extract_path(self) -> List[Tuple[int, int]]:
         if self.precursor:
             return self.precursor.extract_path() + [self.coordinate]
+        else:
+            return [self.coordinate]
+            
 
 
 class RandomWalk(Solver):

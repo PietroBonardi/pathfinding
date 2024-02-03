@@ -6,7 +6,7 @@ def main():
     map_ui = MapUI(5, 10)
     map_ui.create_map()
     map_ui.window.mainloop()
-    
+
 
 if __name__ == "__main__":
     main()

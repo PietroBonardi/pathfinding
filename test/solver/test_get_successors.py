@@ -18,8 +18,7 @@ COMBINATIONS = [(grid_no_obs, (2, 2), expected_0),
                 (grid_obs, (2, 2), expected_3)]
 
 
-@pytest.mark.parametrize("grid, coordinate, expected", COMBINATIONS)
-def test_compact(grid, coordinate, expected):
-    solver = Solver(grid)
-    successors = solver.get_successors(coordinate)
+@pytest.mark.parametrize("map, coordinate, expected", COMBINATIONS)
+def test_compact(map ,coordinate, expected):
+    successors = map.get_successors(coordinate)
     assert set(successors) == set(expected)

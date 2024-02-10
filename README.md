@@ -1,4 +1,12 @@
 # pathfinding
 
-Even before starting, it is important to notice that crazy horse - a.k.a. cavallopazzo - is fired!
+Interactive interface for visualize **shortest path algorithms**. 
+
+**Implemented searching methods:**
+- Random Walk
+- Depth First Search
+
+**Working on:** 
+- Dijkstra
+- A star
 

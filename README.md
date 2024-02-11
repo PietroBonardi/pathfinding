@@ -26,7 +26,7 @@ make local
 make run
 ```
 ---
-**Working on:** 
+**Working on:** 🔧
 - Dijkstra
 - A star
 - Enhancing UI

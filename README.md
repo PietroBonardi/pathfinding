@@ -26,8 +26,8 @@ make local
 make run
 ```
 ---
-**TODO**
-**Implemented searching methods:**
+**Working on** 🔧
+*Implementing* 
 - Random Walk
 - Depth First Search
 

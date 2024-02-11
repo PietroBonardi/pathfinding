@@ -26,12 +26,6 @@ make local
 make run
 ```
 ---
-**Working on** 🔧
-
-*Implementing* 
-- Random Walk
-- Depth First Search
-
 **Working on:** 
 - Dijkstra
 - A star

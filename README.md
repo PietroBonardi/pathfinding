@@ -6,7 +6,7 @@
 ---
 ### Overview
 An interactive interface for visualizing shortest path algorithms. 
-- Set your starting point 📌
+- set your starting point 📌
 - add obstacles 👾
 - set a destination 🏠
 

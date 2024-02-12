@@ -1,7 +1,7 @@
 ## Pathfinding
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![Python Version](https://img.shields.io/badge/Python->=3.9-red)
-[![Coverage](https://img.shields.io/badge/Coverage-95%25-green)](https://github.com/PietroBonardi/pathfinding)
+[![Test Coverage](https://img.shields.io/badge/Coverage-95%25-green)](https://github.com/PietroBonardi/pathfinding)
 
 ---
 ### Overview

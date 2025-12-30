@@ -20,8 +20,7 @@ class Node:
 class RandomWalk(Solver):
     def __init__(self, map: Map) -> None:
         super().__init__(map)
-
-    # NOTE: implemented abstract method
+        
     def solve(self) -> List[Tuple[int, int]]:
         final_node = self.random_walk()
 

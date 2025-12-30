@@ -1,9 +1,8 @@
 run: 
-	python3 main.py
+	python main.py
 	
 local: 
-	pip3 install -e ./src
-	pip3 install -r requirements.txt
+	pip install -e ./
 
-test:
-	pytest --cov=src/pathfinder/data_structure
+requirements:
+	pip install -r requirements.txt

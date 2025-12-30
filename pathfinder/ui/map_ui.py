@@ -1,6 +1,6 @@
 import tkinter as tk
 from pathfinder.data_structure.map import Map
-from pathfinder.shortcuts import *
+from pathfinder.utils.shortcuts import CELL_STATES
 from pathfinder.engines.search import DepthFirstSearch
 from typing import List, Tuple
 import time
@@ -36,21 +36,21 @@ class MapUI:
         row = cell_widget.grid_info()["row"]
         col = cell_widget.grid_info()["column"]
 
-        if self.map.start is None:
-            self.map.insert_element((row, col), label=START)
+        if self.map.start == CELL_STATES.unset:
+            self.map.insert_element((row, col), label=CELL_STATES.start)
             cell_widget.config(bg="blue")
 
-        elif self.map.end is None:
-            self.map.insert_element((row, col), label=END)
+        elif self.map.end == CELL_STATES.unset:
+            self.map.insert_element((row, col), label=CELL_STATES.end)
             cell_widget.config(bg="red")
 
         else:
-            self.map.insert_element((row, col), label=OBSTACLE)
+            self.map.insert_element((row, col), label=CELL_STATES.obstacle)
             cell_widget.config(bg="black")
 
     def clear(self) -> None:
         self.map = Map(self.rows, self.cols)
-        self.map.start, self.map.end = None, None
+        self.map.start, self.map.end = CELL_STATES.unset, CELL_STATES.unset
         
         for i in range(self.rows):
             for j in range(self.cols):

@@ -35,7 +35,7 @@ class RandomWalk(Solver):
             if current.coordinate == end:
                 return current
 
-            successors = self.map.get_successors(current.coordinate)
+            successors = self.map.get_neighbor_coordinates(current.coordinate)
             next = Node(coordinate=random.sample(successors, 1)[0], precursor=current)
             current = next
 
@@ -63,7 +63,7 @@ class DepthFirstSearch(Solver):
             if cur_node.coordinate == end:
                 return cur_node
 
-            successors = self.map.get_successors(cur_node.coordinate)
+            successors = self.map.get_neighbor_coordinates(cur_node.coordinate)
             for coordinate in successors:
                 if coordinate not in closed:
                     open.append(Node(coordinate=coordinate, precursor=cur_node))

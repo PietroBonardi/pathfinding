@@ -1,4 +1,4 @@
-from pathfinder.data_structure.map import Map
+from pathfinding.data_structure.map import Map
 
 
 class Solver:  # NOTE: Abstract method

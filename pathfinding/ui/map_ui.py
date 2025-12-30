@@ -1,7 +1,7 @@
 import tkinter as tk
-from pathfinder.data_structure.map import Map
-from pathfinder.utils.shortcuts import CELL_STATES
-from pathfinder.engines.search import DepthFirstSearch
+from pathfinding.data_structure.map import Map
+from pathfinding.utils.shortcuts import CELL_STATES
+from pathfinding.engines.search import DepthFirstSearch
 from typing import List, Tuple
 import time
 

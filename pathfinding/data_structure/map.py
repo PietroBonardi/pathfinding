@@ -1,6 +1,6 @@
 import numpy as np
 from typing import Tuple, List
-from pathfinder.utils.shortcuts import CELL_STATES
+from pathfinding.utils.shortcuts import CELL_STATES
 
 
 class Map:

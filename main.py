@@ -1,5 +1,5 @@
-from pathfinder.data_structure.map import Map
-from pathfinder.ui.map_ui import MapUI
+from pathfinding.data_structure.map import Map
+from pathfinding.ui.map_ui import MapUI
 
 
 def main():

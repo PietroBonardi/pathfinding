@@ -1,6 +1,6 @@
 import pytest
-from pathfinder.data_structure.map import Map
-from pathfinder.utils.shortcuts import CELL_STATES
+from pathfinding.data_structure.map import Map
+from pathfinding.utils.shortcuts import CELL_STATES
 
 map_no_obs = Map(rows=4, cols=5)
 map_obs = Map(rows=4, cols=5)
